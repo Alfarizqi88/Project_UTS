@@ -68,7 +68,7 @@
         android:layout_marginTop="12dp"
         android:text="+"
         android:textColor="@color/colorBlack"
-        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintStart_toEndOf="@+id/edit_p"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <TextView
@@ -90,29 +90,7 @@
         android:layout_marginTop="12dp"
         android:text=")"
         android:textColor="@color/colorBlack"
-        app:layout_constraintStart_toEndOf="@+id/editText3"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="50dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="8dp"
-        android:ems="4"
-        android:textColor="@color/colorBlack"
-        android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="50dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="8dp"
-        android:ems="4"
-        android:textColor="@color/colorBlack"
-        android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintStart_toEndOf="@+id/edit_l"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -123,25 +101,13 @@
         app:layout_constraintGuide_percent="0.3" />
 
     <TextView
-        android:id="@+id/textView17"
-        android:layout_width="18dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:text="="
-        android:textColor="@color/colorBlack"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textView21"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
-
-    <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/txthasilkel"
         android:layout_width="60dp"
         android:layout_height="20dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="6dp"
         android:layout_marginTop="12dp"
         android:textColor="@color/colorBlack"
-        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintStart_toEndOf="@+id/btnkel"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -159,22 +125,11 @@
         android:layout_marginTop="12dp"
         android:text="x"
         android:textColor="@color/colorBlack"
-        app:layout_constraintStart_toEndOf="@+id/editText4"
+        app:layout_constraintStart_toEndOf="@+id/edit_panjang"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="47dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:ems="4"
-        android:textColor="@color/colorBlack"
-        android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/textView31"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
-
-    <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/edit_panjang"
         android:layout_width="47dp"
         android:layout_height="45dp"
         android:layout_marginStart="44dp"
@@ -184,26 +139,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
-    <TextView
-        android:id="@+id/textView32"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <EditText
+        android:id="@+id/edit_l"
+        android:layout_width="47dp"
+        android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:text="="
+        android:ems="4"
+        android:inputType="number"
         android:textColor="@color/colorBlack"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/editText2"
+        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <EditText
+        android:id="@+id/edit_p"
+        android:layout_width="47dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:ems="4"
+        android:inputType="number"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <EditText
+        android:id="@+id/edit_lebar"
+        android:layout_width="47dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:ems="4"
+        android:inputType="number"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintStart_toEndOf="@+id/textView31"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <TextView
-        android:id="@+id/textView33"
+        android:id="@+id/txthasilluas"
         android:layout_width="60dp"
         android:layout_height="20dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="6dp"
         android:layout_marginTop="12dp"
         android:textColor="@color/colorBlack"
-        app:layout_constraintStart_toEndOf="@+id/textView32"
+        app:layout_constraintStart_toEndOf="@+id/btnluas"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <TextView
@@ -218,5 +194,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <Button
+        android:id="@+id/btnkel"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="4dp"
+        android:text="="
+        app:layout_constraintStart_toEndOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <Button
+        android:id="@+id/btnluas"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="="
+        app:layout_constraintStart_toEndOf="@+id/edit_lebar"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
