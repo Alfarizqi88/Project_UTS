@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.NextActivity"></activity>
+        <activity android:name=".activities.SegitigaActivity"></activity>
+        <activity android:name=".activities.PersegiActivity" />
+        <activity android:name=".activities.PersegiPanjangActivity" />
+        <activity android:name=".activities.LingkaranActivity" />
         <activity android:name=".activities.HomeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
