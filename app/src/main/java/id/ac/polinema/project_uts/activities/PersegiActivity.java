@@ -52,7 +52,10 @@ public class PersegiActivity extends AppCompatActivity {
                     Toast.makeText(getApplication(),"mohon sisi pertama diisi",Toast.LENGTH_LONG).show();
                 }else if(sisi2.length()==0){
                     Toast.makeText(getApplication(),"mohon sisi kedua diisi",Toast.LENGTH_LONG).show();
-                }else {
+                }else if(sisi1.length() != sisi2.length()){
+                    Toast.makeText(getApplication(),"inputan sisi harus sama",Toast.LENGTH_LONG).show();
+                }
+                else {
                     String isisisi1 = sisi1.getText().toString();
                     String isisisi2 = sisi2.getText().toString();
 

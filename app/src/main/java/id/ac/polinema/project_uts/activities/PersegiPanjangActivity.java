@@ -38,7 +38,10 @@ public class PersegiPanjangActivity extends AppCompatActivity {
                     Toast.makeText(getApplication(),"mohon panjang diisi",Toast.LENGTH_LONG).show();
                 }else if(l.length()==0){
                     Toast.makeText(getApplication(),"mohon lebar diisi",Toast.LENGTH_LONG).show();
-                }else {
+                }else if(p.length() == l.length()){
+                    Toast.makeText(getApplication(),"inputan harus berbeda",Toast.LENGTH_LONG).show();
+                }
+                else {
                     String isiP = p.getText().toString();
                     String isiL = l.getText().toString();
 
@@ -55,11 +58,15 @@ public class PersegiPanjangActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(pjg.length()==0 && lbr.length()==0){
                     Toast.makeText(getApplication(),"mohon panjang dan lebar diisi",Toast.LENGTH_LONG).show();
-                }else if(pjg.length()==0){
-                    Toast.makeText(getApplication(),"mohon panjang diisi",Toast.LENGTH_LONG).show();
-                }else if(lbr.length()==0){
-                    Toast.makeText(getApplication(),"mohon lebar diisi",Toast.LENGTH_LONG).show();
-                }else {
+                    if(pjg.length()==0){
+                        Toast.makeText(getApplication(),"mohon panjang diisi",Toast.LENGTH_LONG).show();
+                    }else if(lbr.length()==0){
+                        Toast.makeText(getApplication(),"mohon lebar diisi",Toast.LENGTH_LONG).show();
+                    }
+                }else if(pjg.length() < lbr.length()){
+                    Toast.makeText(getApplication(),"inputan anda terbalik",Toast.LENGTH_LONG).show();
+                }
+                else {
                     String isiP = pjg.getText().toString();
                     String isiL = lbr.getText().toString();
 

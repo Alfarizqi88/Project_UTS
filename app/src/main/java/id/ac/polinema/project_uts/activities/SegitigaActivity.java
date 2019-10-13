@@ -34,9 +34,10 @@ public class SegitigaActivity extends AppCompatActivity {
             btnkel.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(a.length() == 0 && b.length()== 0 && c.length()==0){
+                    if(a.length() == 0 || b.length()== 0 || c.length()==0){
                         Toast.makeText(getApplication(),"Setiap sisi harus diisi",Toast.LENGTH_LONG).show();
-                    }else{
+                    }
+                    else{
                         String isiA = a.getText().toString();
                         String isiB = b.getText().toString();
                         String isiC = c.getText().toString();
