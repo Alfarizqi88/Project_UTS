@@ -4,13 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FF9800"
     tools:context=".activities.SegitigaActivity">
+
+    <ImageView
+        android:id="@+id/imgMath5"
+        android:layout_width="255dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/math" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="126dp"
         android:layout_height="113dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/satu" />
@@ -184,7 +196,7 @@
         android:id="@+id/textView34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="26dp"
         android:text="LATIHAN SEGITIGA"
         android:textColor="@color/colorBlack"
         android:textSize="20dp"
@@ -200,8 +212,8 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="12dp"
         android:text="0.5"
-        android:textSize="18dp"
         android:textColor="@color/colorBlack"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 

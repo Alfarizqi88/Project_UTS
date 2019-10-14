@@ -4,13 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color1"
     tools:context=".activities.HomeActivity">
+
+    <FrameLayout
+        android:id="@+id/cek2"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/colormaroon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5">
+
+    </FrameLayout>
 
     <ImageView
         android:id="@+id/imgMath"
         android:layout_width="325dp"
         android:layout_height="115dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

@@ -1,6 +1,7 @@
 package id.ac.polinema.project_uts.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
@@ -22,50 +23,55 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void handleClickLingkaran(View view) {
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        LingkaranFragment lingkaranFragment = (LingkaranFragment) getSupportFragmentManager().findFragmentByTag("LINGKARAN_FRAGMENT");
-        if (lingkaranFragment != null && lingkaranFragment.isVisible()) {
-//            fragmentTransaction.commit();
-        } else {
-            fragmentTransaction.replace(R.id.cek1, new LingkaranFragment(), "LINGKARAN_FRAGMENT");
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.cek1);
+        if(fragment == null || fragment instanceof PersegiFragment || fragment instanceof PersegiPanjangFragment
+                || fragment instanceof SegitigaFragment){
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_left,R.anim.enter_from_right)
+                    .replace(R.id.cek1,new LingkaranFragment(), "LINGKARAN_FRAGMENT")
+                    .addToBackStack(null)
+                    .commit();
         }
+
     }
 
     public void handleClickPersegiPJG(View view) {
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        PersegiPanjangFragment persegiPanjangFragment = (PersegiPanjangFragment) getSupportFragmentManager().findFragmentByTag("PANJANG_FRAGMENT");
-        if (persegiPanjangFragment != null && persegiPanjangFragment.isVisible()) {
-//            fragmentTransaction.commit();
-        } else {
-            fragmentTransaction.replace(R.id.cek1, new PersegiPanjangFragment(), "PANJANG_FRAGMENT");
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.cek1);
+        if(fragment == null || fragment instanceof LingkaranFragment || fragment instanceof PersegiFragment
+                || fragment instanceof SegitigaFragment){
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_left,R.anim.enter_from_right)
+                    .replace(R.id.cek1,new PersegiPanjangFragment(), "PERSEGI_PANJANG_FRAGMENT")
+                    .addToBackStack(null)
+                    .commit();
         }
     }
 
     public void handleClickSegitiga(View view) {
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        SegitigaFragment segitigaFragment = (SegitigaFragment) getSupportFragmentManager().findFragmentByTag("SEGITIGA_FRAGMENT");
-        if (segitigaFragment != null && segitigaFragment.isVisible()) {
-//            fragmentTransaction.commit();
-        } else {
-            fragmentTransaction.replace(R.id.cek1, new SegitigaFragment(), "SEGITIGA_FRAGMENT");
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.cek1);
+        if(fragment == null || fragment instanceof LingkaranFragment || fragment instanceof PersegiPanjangFragment
+                || fragment instanceof PersegiFragment){
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_left,R.anim.enter_from_right)
+                    .replace(R.id.cek1,new SegitigaFragment(), "SEGITIGA_FRAGMENT")
+                    .addToBackStack(null)
+                    .commit();
         }
     }
 
     public void handleClickPersegi(View view) {
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        PersegiFragment persegiFragment = (PersegiFragment) getSupportFragmentManager().findFragmentByTag("PERSEGI_FRAGMENT");
-        if (persegiFragment != null && persegiFragment.isVisible()) {
-//            fragmentTransaction.commit();
-        } else {
-            fragmentTransaction.replace(R.id.cek1, new PersegiFragment(), "PERSEGI_FRAGMENT");
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.cek1);
+        if(fragment == null || fragment instanceof LingkaranFragment || fragment instanceof PersegiPanjangFragment
+                || fragment instanceof SegitigaFragment){
+            getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_left,R.anim.enter_from_right)
+                    .replace(R.id.cek1,new PersegiFragment(), "PERSEGI_FRAGMENT")
+                    .addToBackStack(null)
+                    .commit();
         }
     }
 }

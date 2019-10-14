@@ -12,69 +12,70 @@ import android.widget.Toast;
 import id.ac.polinema.project_uts.R;
 
 public class PersegiPanjangActivity extends AppCompatActivity {
-    EditText p,l,pjg,lbr;
-    Button btnkel, btnluas;
-    TextView txtkel, txtluas;
+    private EditText p,l,pjg,lbr;
+    private Button btnkel, btnluas;
+    private TextView txtkel, txtluas;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_persegi_panjang);
 
-        p = (EditText)findViewById(R.id.edit_p);
-        l = (EditText)findViewById(R.id.edit_l);
-        pjg = (EditText)findViewById(R.id.edit_panjang);
-        lbr = (EditText)findViewById(R.id.edit_lebar);
-        btnkel = (Button)findViewById(R.id.btnkel);
-        btnluas = (Button)findViewById(R.id.btnluas);
-        txtkel = (TextView)findViewById(R.id.txthasilkel);
-        txtluas = (TextView)findViewById(R.id.txthasilluas);
+        p = findViewById(R.id.edit_p);
+        l = findViewById(R.id.edit_l);
+        pjg = findViewById(R.id.edit_panjang);
+        lbr = findViewById(R.id.edit_lebar);
+        btnkel = findViewById(R.id.btnkel);
+        btnluas = findViewById(R.id.btnluas);
+        txtkel = findViewById(R.id.txthasilkel);
+        txtluas = findViewById(R.id.txthasilluas);
 
         btnkel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(p.length()==0 && l.length()==0){
-                    Toast.makeText(getApplication(),"mohon panjang dan lebar diisi",Toast.LENGTH_LONG).show();
-                }else if(p.length()==0){
-                    Toast.makeText(getApplication(),"mohon panjang diisi",Toast.LENGTH_LONG).show();
-                }else if(l.length()==0){
-                    Toast.makeText(getApplication(),"mohon lebar diisi",Toast.LENGTH_LONG).show();
-                }else if(p.length() == l.length()){
-                    Toast.makeText(getApplication(),"inputan harus berbeda",Toast.LENGTH_LONG).show();
+                String isiP = p.getText().toString();
+                String isiL = l.getText().toString();
+
+                if(isiP.equals("") && isiL.equals("")){
+                    Toast.makeText(getApplication(),"mohon panjang dan lebar diisi",Toast.LENGTH_SHORT).show();
+                }else if(isiP.equals("")){
+                    Toast.makeText(getApplication(),"mohon panjang diisi",Toast.LENGTH_SHORT).show();
+                }else if(isiL.equals("")){
+                    Toast.makeText(getApplication(),"mohon lebar diisi",Toast.LENGTH_SHORT).show();
+                }
+                else if(isiP.equals(isiL)){
+                    Toast.makeText(getApplication(),"inputan anda tidak boleh sama",Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    String isiP = p.getText().toString();
-                    String isiL = l.getText().toString();
-
                     float p = Float.parseFloat(isiP);
                     float l = Float.parseFloat(isiL);
                     float hasil = KelilingPersegiPanjang(p,l);
                     String output = String.valueOf(hasil);
-                    txtkel.setText(output.toString());
+                    txtkel.setText(output);
                 }
             }
         });
         btnluas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(pjg.length()==0 && lbr.length()==0){
-                    Toast.makeText(getApplication(),"mohon panjang dan lebar diisi",Toast.LENGTH_LONG).show();
-                    if(pjg.length()==0){
-                        Toast.makeText(getApplication(),"mohon panjang diisi",Toast.LENGTH_LONG).show();
-                    }else if(lbr.length()==0){
-                        Toast.makeText(getApplication(),"mohon lebar diisi",Toast.LENGTH_LONG).show();
-                    }
-                }else if(pjg.length() < lbr.length()){
-                    Toast.makeText(getApplication(),"inputan anda terbalik",Toast.LENGTH_LONG).show();
+                String isiP = pjg.getText().toString();
+                String isiL = lbr.getText().toString();
+
+                if(isiP.equals("") && isiL.equals("")){
+                    Toast.makeText(getApplication(),"mohon panjang dan lebar diisi",Toast.LENGTH_SHORT).show();
+                }else if(isiP.equals("")){
+                    Toast.makeText(getApplication(),"mohon panjang diisi",Toast.LENGTH_SHORT).show();
+                }else if(isiL.equals("")){
+                    Toast.makeText(getApplication(),"mohon lebar diisi",Toast.LENGTH_SHORT).show();
+                }
+                else if(isiP.equals(isiL)){
+                    Toast.makeText(getApplication(),"inputan anda tidak boleh sama",Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    String isiP = pjg.getText().toString();
-                    String isiL = lbr.getText().toString();
-
                     float pjg = Float.parseFloat(isiP);
                     float lbr = Float.parseFloat(isiL);
                     float hasil = LuasPersegiPanjang(pjg,lbr);
                     String output = String.valueOf(hasil);
-                    txtluas.setText(output.toString());
+                    txtluas.setText(output);
                 }
             }
         });

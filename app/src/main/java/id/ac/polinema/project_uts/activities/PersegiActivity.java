@@ -20,50 +20,53 @@ public class PersegiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_persegi);
-        s =(EditText)findViewById(R.id.edit_sisi);
-        sisi1 =(EditText)findViewById(R.id.edit_sisiluas1);
-        sisi2 =(EditText)findViewById(R.id.edit_sisiluas2);
-        btnkel=(Button)findViewById(R.id.btnkel);
-        btnluas=(Button)findViewById(R.id.btnluas);
-        txtkel = (TextView)findViewById(R.id.txthasilkel);
-        txtluas = (TextView)findViewById(R.id.txthasilluas);
+
+        s =findViewById(R.id.edit_sisi);
+        sisi1 =findViewById(R.id.edit_sisiluas1);
+        sisi2 =findViewById(R.id.edit_sisiluas2);
+        btnkel=findViewById(R.id.btnkel);
+        btnluas=findViewById(R.id.btnluas);
+        txtkel = findViewById(R.id.txthasilkel);
+        txtluas = findViewById(R.id.txthasilluas);
 
         btnkel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(s.length()==0 ){
-                    Toast.makeText(getApplication(),"mohon sisi diisi",Toast.LENGTH_LONG).show();
+                String isiS = s.getText().toString();
+                if(isiS.equals("") ){
+                    Toast.makeText(getApplication(),"mohon sisi diisi",Toast.LENGTH_SHORT).show();
                 }else {
-                    String isiS = s.getText().toString();
-
                     double s = Double.parseDouble(isiS);
                     double hasil = KelilingPersegi(s);
                     String output = String.valueOf(hasil);
-                    txtkel.setText(output.toString());
+                    txtkel.setText(output);
                 }
             }
         });
         btnluas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(sisi1.length()==0 && sisi2.length()==0){
-                    Toast.makeText(getApplication(),"mohon Semua sisi diisi",Toast.LENGTH_LONG).show();
-                }else if(sisi1.length()==0){
-                    Toast.makeText(getApplication(),"mohon sisi pertama diisi",Toast.LENGTH_LONG).show();
-                }else if(sisi2.length()==0){
-                    Toast.makeText(getApplication(),"mohon sisi kedua diisi",Toast.LENGTH_LONG).show();
-                }else if(sisi1.length() != sisi2.length()){
-                    Toast.makeText(getApplication(),"inputan sisi harus sama",Toast.LENGTH_LONG).show();
+
+                String isisisi1 = sisi1.getText().toString();
+                String isisisi2 = sisi2.getText().toString();
+
+                if(isisisi1.equals("") && isisisi2.equals("")){
+                    Toast.makeText(getApplication(),"mohon Semua sisi diisi",Toast.LENGTH_SHORT).show();
+                }else if(isisisi1.equals("")){
+                    Toast.makeText(getApplication(),"mohon sisi pertama diisi",Toast.LENGTH_SHORT).show();
+                }else if(isisisi2.equals("")){
+                    Toast.makeText(getApplication(),"mohon sisi kedua diisi",Toast.LENGTH_SHORT).show();
                 }
+//                else if(){
+//                    Toast.makeText(getApplication(),"inputan sisi harus sama",Toast.LENGTH_SHORT).show();
+//                }
                 else {
-                    String isisisi1 = sisi1.getText().toString();
-                    String isisisi2 = sisi2.getText().toString();
 
                     double sisi1 = Double.parseDouble(isisisi1);
                     double sisi2 = Double.parseDouble(isisisi2);
                     double hasil = LuasPersegi(sisi1,sisi2);
                     String output = String.valueOf(hasil);
-                    txtluas.setText(output.toString());
+                    txtluas.setText(output);
                 }
             }
         });

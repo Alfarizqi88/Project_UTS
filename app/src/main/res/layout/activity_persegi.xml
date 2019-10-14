@@ -4,12 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#009688"
     tools:context=".activities.PersegiActivity">
+
+    <ImageView
+        android:id="@+id/imgMath3"
+        android:layout_width="255dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/math" />
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="126dp"
         android:layout_height="113dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/satu" />
@@ -73,8 +86,8 @@
         android:layout_width="60dp"
         android:layout_height="20dp"
         android:textColor="@color/colorBlack"
-        android:textStyle="bold"
         android:textSize="18dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline23"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.547"
@@ -106,8 +119,8 @@
         android:layout_height="20dp"
         android:layout_marginTop="24dp"
         android:textColor="@color/colorBlack"
-        android:textStyle="bold"
         android:textSize="18dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,11 +130,11 @@
         android:id="@+id/textView34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="26dp"
         android:text="LATIHAN PERSEGI "
         android:textColor="@color/colorBlack"
-        android:textStyle="bold"
         android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />

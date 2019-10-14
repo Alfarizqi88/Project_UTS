@@ -26,7 +26,7 @@
         android:text="l  = Lebar"
         android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintHorizontal_bias="0.408"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -36,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Rumus :"
+        android:textStyle="bold"
         android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,6 +49,7 @@
         android:layout_marginStart="26dp"
         android:layout_marginTop="15dp"
         android:text="Keliling Persegi Panjang"
+        android:textStyle="bold"
         android:textColor="@color/colorBlack"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -59,6 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Luas Persegi Panjang"
+        android:textStyle="bold"
         android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintHorizontal_bias="1.0"
@@ -125,9 +128,12 @@
 
     <Button
         android:id="@+id/btnLatihan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:textColor="@color/colorwhite"
+        android:textStyle="bold"
         android:text="Latihan"
+        android:background="@color/colormaroon"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
