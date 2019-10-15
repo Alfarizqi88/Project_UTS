@@ -12,7 +12,7 @@ import android.widget.Toast;
 import id.ac.polinema.project_uts.R;
 
 public class PersegiActivity extends AppCompatActivity {
-    EditText s,sisi1,sisi2;
+    EditText s,sisi;
     Button btnkel,btnluas;
     TextView txtkel,txtluas;
 
@@ -22,8 +22,7 @@ public class PersegiActivity extends AppCompatActivity {
         setContentView(R.layout.activity_persegi);
 
         s =findViewById(R.id.edit_sisi);
-        sisi1 =findViewById(R.id.edit_sisiluas1);
-        sisi2 =findViewById(R.id.edit_sisiluas2);
+        sisi =findViewById(R.id.edit_sisiluas);
         btnkel=findViewById(R.id.btnkel);
         btnluas=findViewById(R.id.btnluas);
         txtkel = findViewById(R.id.txthasilkel);
@@ -47,24 +46,15 @@ public class PersegiActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String isisisi1 = sisi1.getText().toString();
-                String isisisi2 = sisi2.getText().toString();
+                String isisisi = sisi.getText().toString();
 
-                if(isisisi1.equals("") && isisisi2.equals("")){
-                    Toast.makeText(getApplication(),"mohon Semua sisi diisi",Toast.LENGTH_SHORT).show();
-                }else if(isisisi1.equals("")){
-                    Toast.makeText(getApplication(),"mohon sisi pertama diisi",Toast.LENGTH_SHORT).show();
-                }else if(isisisi2.equals("")){
-                    Toast.makeText(getApplication(),"mohon sisi kedua diisi",Toast.LENGTH_SHORT).show();
+                if(isisisi.equals("")){
+                    Toast.makeText(getApplication(),"mohon sisi diisi",Toast.LENGTH_SHORT).show();
                 }
-//                else if(){
-//                    Toast.makeText(getApplication(),"inputan sisi harus sama",Toast.LENGTH_SHORT).show();
-//                }
                 else {
 
-                    double sisi1 = Double.parseDouble(isisisi1);
-                    double sisi2 = Double.parseDouble(isisisi2);
-                    double hasil = LuasPersegi(sisi1,sisi2);
+                    double sisi = Double.parseDouble(isisisi);
+                    double hasil = LuasPersegi(sisi);
                     String output = String.valueOf(hasil);
                     txtluas.setText(output);
                 }
@@ -74,7 +64,7 @@ public class PersegiActivity extends AppCompatActivity {
     public double KelilingPersegi(double s){
         return 4 * s ;
     }
-    public double LuasPersegi(double sisi1, double sisi2){
-        return sisi1 * sisi2 ;
+    public double LuasPersegi(double sisi){
+        return sisi * sisi ;
     }
 }
