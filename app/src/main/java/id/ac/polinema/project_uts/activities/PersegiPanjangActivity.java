@@ -70,6 +70,9 @@ public class PersegiPanjangActivity extends AppCompatActivity {
                 else if(isiP.equals(isiL)){
                     Toast.makeText(getApplication(),"inputan anda tidak boleh sama",Toast.LENGTH_SHORT).show();
                 }
+                else if(Float.parseFloat(isiP) < Float.parseFloat(isiL)){
+                    Toast.makeText(getApplication(),"inputan lebar melebihi panjang",Toast.LENGTH_SHORT).show();
+                }
                 else {
                     float pjg = Float.parseFloat(isiP);
                     float lbr = Float.parseFloat(isiL);
